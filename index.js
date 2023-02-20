@@ -4,10 +4,16 @@ class Graph {
     this.adjacentList = {
     }; 
   } 
-  addVertex(node)  { 
+  addVertex(node)  {
+    //Adds a key to the adjacentList object
+    //The value is an empty list, since to start, a vertex has no edges.
+    this.adjacentList[node] = [];
   } 
   addEdge(node1, node2) { 
-    //undirected Graph 
+    //Pushes the opposite vertex to the current vertex's list in the adjacentList
+    //Does this for both nodes, so that the connection shows up for each vertex.
+    this.adjacentList[node1].push(node2);
+    this.adjacentList[node2].push(node1);
   } 
   showConnections() { 
     const allNodes = Object.keys(this.adjacentList); 

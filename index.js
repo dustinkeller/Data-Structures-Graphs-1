@@ -8,6 +8,7 @@ class Graph {
     //Adds a key to the adjacentList object
     //The value is an empty list, since to start, a vertex has no edges.
     this.adjacentList[node] = [];
+    this.numberOfNodes++;
   } 
   addEdge(node1, node2) { 
     //Pushes the opposite vertex to the current vertex's list in the adjacentList
